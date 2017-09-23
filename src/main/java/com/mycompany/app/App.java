@@ -14,13 +14,18 @@ import spark.template.mustache.MustacheTemplateEngine;
 
 public class App
 {
-    public static boolean search(ArrayList<Integer> array, int e) {
-      System.out.println("inside search");
+    public static boolean search(ArrayList<String> array,String a, int e) {
+      System.out.println("Search if " + a + " takes place " + e + " times in array.");
       if (array == null) return false;
-
-      for (int elt : array) {
-        if (elt == e) return true;
+      if (e<0) return false;
+      if(a.equals("")) return false;
+      int times = 0;
+      for (String elt : array) {
+        if (elt.equals(a))
+          times +=1;
       }
+      if(times==e)
+        return true
       return false;
     }
 
