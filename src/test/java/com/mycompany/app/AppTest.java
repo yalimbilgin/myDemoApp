@@ -21,13 +21,13 @@ public class AppTest
       assertFalse(new App().search(array, "murat",2));
     }
 
-    public void testEmptyArray() {
-      ArrayList<String> array = new ArrayList<>();
-      assertFalse(new App().search(array,"ahmet" 1));
+    public void testNotEnoughTime() {
+      ArrayList<String> array = new ArrayList<>("ahmet", "ayse", "mehmet", "fatma");
+      assertFalse(new App().search(array,"ahmet" ,3));
     }
 
     public void testNull() {
-      assertFalse(new App().search(null, 1));
+      assertFalse(new App().search(null,"a", 1));
     }
     public void testNegative() {
       ArrayList<String> array = new ArrayList<>(Arrays.asList("ahmet", "ayse", "mehmet", "fatma"));
