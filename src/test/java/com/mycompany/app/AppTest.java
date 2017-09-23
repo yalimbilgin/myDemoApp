@@ -13,7 +13,7 @@ public class AppTest
 {
     public void testFound() {
       ArrayList<String> array = new ArrayList<>(Arrays.asList("ahmet", "ayse", "mehmet", "ahmet"));
-      assertTrue(new App().search(array, "",2));
+      assertTrue(new App().search(array, "ahmet",2));
     }
 
     public void testNotFound() {
@@ -22,7 +22,7 @@ public class AppTest
     }
 
     public void testNotEnoughTime() {
-      ArrayList<String> array = new ArrayList<>("ahmet", "ayse", "mehmet", "fatma");
+      ArrayList<String> array = new ArrayList<>(Arrays.asList("ahmet", "ayse", "mehmet", "fatma"));
       assertFalse(new App().search(array,"ahmet" ,3));
     }
 

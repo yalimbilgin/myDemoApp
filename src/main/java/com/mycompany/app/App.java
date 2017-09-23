@@ -25,7 +25,7 @@ public class App
           times +=1;
       }
       if(times==e)
-        return true
+        return true;
       return false;
     }
 
